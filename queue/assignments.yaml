@@ -1,0 +1,21 @@
+assignments:
+  engineer1:
+    task_id: null
+    description: null
+    target_path: null
+    status: idle
+  engineer2:
+    task_id: null
+    description: null
+    target_path: null
+    status: idle
+  engineer3:
+    task_id: null
+    description: null
+    target_path: null
+    status: idle
+  designer:
+    task_id: null
+    description: null
+    target_path: null
+    status: idle

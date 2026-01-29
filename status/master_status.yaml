@@ -1,0 +1,29 @@
+last_updated: null
+current_task: null
+task_status: idle
+task_description: null
+agents:
+  pm:
+    status: idle
+    current_subtasks: 0
+    last_action: null
+  engineer1:
+    status: idle
+    current_task: null
+    progress: 0
+    last_completed: null
+  engineer2:
+    status: idle
+    current_task: null
+    progress: 0
+    last_completed: null
+  engineer3:
+    status: idle
+    current_task: null
+    progress: 0
+    last_completed: null
+  designer:
+    status: idle
+    current_task: null
+    progress: 0
+    last_completed: null
