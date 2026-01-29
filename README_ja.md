@@ -44,7 +44,7 @@
 
 ## 🚀 クイックスタート
 
-### 🪟 Windowsユーザー（最も一般的）
+### 🍎 Macユーザー
 
 <table>
 <tr>
@@ -57,9 +57,9 @@
 
 📥 **リポジトリをダウンロード**
 
-[ZIPダウンロード](https://github.com/yohey-w/multi-agent-studio/archive/refs/heads/main.zip) して `C:\tools\multi-agent-studio` に展開
+[ZIPダウンロード](https://github.com/yohey-w/multi-agent-studio/archive/refs/heads/main.zip) して `~/multi-agent-studio` に展開
 
-*または git を使用:* `git clone https://github.com/yohey-w/multi-agent-studio.git C:\tools\multi-agent-studio`
+*または git を使用:* `git clone https://github.com/yohey-w/multi-agent-studio.git ~/multi-agent-studio`
 
 </td>
 </tr>
@@ -71,7 +71,12 @@
 </td>
 <td>
 
-🖱️ **`install.bat` をダブルクリック**
+💻 **ターミナルを開いて実行:**
+
+```bash
+cd ~/multi-agent-studio
+./install.sh
+```
 
 インストーラーが全て自動で処理します。
 
@@ -93,58 +98,14 @@
 
 #### 📅 毎日の起動（初回インストール後）
 
-**Ubuntuターミナル**（WSL）を開いて実行：
-
-```bash
-cd /mnt/c/tools/multi-agent-studio
-./startup.sh
-```
-
----
-
-<details>
-<summary>🐧 <b>Linux / Mac ユーザー</b>（クリックで展開）</summary>
-
-### 初回セットアップ
-
-```bash
-# 1. リポジトリをクローン
-git clone https://github.com/yohey-w/multi-agent-studio.git ~/multi-agent-studio
-cd ~/multi-agent-studio
-
-# 2. スクリプトに実行権限を付与
-chmod +x *.sh
-
-# 3. 起動
-./startup.sh
-```
-
-### 毎日の起動
+**ターミナル**を開いて実行：
 
 ```bash
 cd ~/multi-agent-studio
 ./startup.sh
 ```
 
-</details>
-
 ---
-
-<details>
-<summary>❓ <b>WSL2とは？なぜ必要？</b>（クリックで展開）</summary>
-
-### WSL2について
-
-**WSL2（Windows Subsystem for Linux）** は、Windows内でLinuxを実行できる機能です。このシステムは `tmux`（Linuxツール）を使って複数のAIエージェントを管理するため、WindowsではWSL2が必要です。
-
-### WSL2がまだない場合
-
-問題ありません！`install.bat` を実行すると：
-1. WSL2がインストールされているかチェック
-2. なければ、インストール方法を案内
-3. 全プロセスをガイド
-
-</details>
 
 ---
 
@@ -217,7 +178,7 @@ watch -n 5 cat ~/multi-agent-studio/status.md
 multi-agent-studio/
 ├── startup.sh                  # 毎日の起動スクリプト
 ├── setup.sh                    # 互換性ラッパー
-├── install.bat                 # Windowsインストーラー
+├── install.sh                  # Macインストーラー
 ├── CLAUDE.md                   # システム概要
 ├── README.md / README_ja.md    # ドキュメント
 │
@@ -346,17 +307,6 @@ tmux capture-pane -t team:0.0 -p | tail -20
 # 必要に応じて再起動
 tmux kill-session -t team
 ./startup.sh
-```
-
-### WSL2でパフォーマンスが遅い
-
-WSL2のメモリ制限を調整：
-
-`C:\Users\<ユーザー名>\.wslconfig`:
-```ini
-[wsl2]
-memory=8GB
-processors=4
 ```
 
 ---
